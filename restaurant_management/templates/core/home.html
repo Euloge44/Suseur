@@ -1,0 +1,300 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Accueil - RestaurantApp{% endblock %}
+
+{% block main_class %}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">
+                    Découvrez les meilleurs restaurants près de chez vous
+                </h1>
+                <p class="lead mb-4">
+                    Commandez vos plats préférés en ligne et faites-vous livrer rapidement. 
+                    Une plateforme complète pour clients, restaurateurs et livreurs.
+                </p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="{% url 'core:register' %}" class="btn btn-light btn-lg">
+                        <i class="fas fa-user-plus me-2"></i>S'inscrire
+                    </a>
+                    <a href="{% url 'core:login' %}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-sign-in-alt me-2"></i>Se connecter
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="hero-image">
+                    <i class="fas fa-utensils display-1 opacity-75"></i>
+                    <i class="fas fa-truck ms-4 display-1 opacity-75"></i>
+                    <i class="fas fa-mobile-alt ms-4 display-1 opacity-75"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Une plateforme pour tous</h2>
+                <p class="lead text-muted">
+                    Que vous soyez client, restaurateur ou livreur, notre plateforme vous offre 
+                    tous les outils nécessaires pour une expérience optimale.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Pour les clients -->
+            <div class="col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-user-friends fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="card-title">Pour les Clients</h4>
+                        <p class="card-text text-muted">
+                            Découvrez des restaurants, commandez en ligne, suivez vos livraisons 
+                            en temps réel et bénéficiez d'un programme de fidélité.
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success me-2"></i>Recherche avancée</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Paiement sécurisé</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Suivi en temps réel</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Programme de fidélité</li>
+                        </ul>
+                        <a href="{% url 'core:register' %}?role=client" class="btn btn-primary">
+                            S'inscrire comme Client
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pour les restaurants -->
+            <div class="col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-store fa-3x text-success"></i>
+                        </div>
+                        <h4 class="card-title">Pour les Restaurants</h4>
+                        <p class="card-text text-muted">
+                            Gérez votre menu, suivez vos commandes, analysez vos performances 
+                            et développez votre clientèle.
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success me-2"></i>Gestion de menu</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Suivi des commandes</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Gestion des stocks</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Analyses détaillées</li>
+                        </ul>
+                        <a href="{% url 'core:register' %}?role=restaurant" class="btn btn-success">
+                            S'inscrire comme Restaurant
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pour les livreurs -->
+            <div class="col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-motorcycle fa-3x text-warning"></i>
+                        </div>
+                        <h4 class="card-title">Pour les Livreurs</h4>
+                        <p class="card-text text-muted">
+                            Acceptez des livraisons, naviguez efficacement, suivez vos gains 
+                            et gérez votre planning.
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success me-2"></i>Navigation optimisée</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Suivi des gains</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Gestion d'horaires</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Support technique</li>
+                        </ul>
+                        <a href="{% url 'core:register' %}?role=livreur" class="btn btn-warning">
+                            S'inscrire comme Livreur
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section bg-light py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-store fa-2x text-primary"></i>
+                    </div>
+                    <h3 class="stat-number">500+</h3>
+                    <p class="stat-label">Restaurants partenaires</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-users fa-2x text-success"></i>
+                    </div>
+                    <h3 class="stat-number">10,000+</h3>
+                    <p class="stat-label">Clients satisfaits</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-motorcycle fa-2x text-warning"></i>
+                    </div>
+                    <h3 class="stat-number">200+</h3>
+                    <p class="stat-label">Livreurs actifs</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-clock fa-2x text-info"></i>
+                    </div>
+                    <h3 class="stat-number">30 min</h3>
+                    <p class="stat-label">Temps de livraison moyen</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="how-it-works-section py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Comment ça marche ?</h2>
+                <p class="lead text-muted">
+                    En quelques clics, commandez vos plats préférés et faites-vous livrer
+                </p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 text-center">
+                <div class="step-item">
+                    <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                        <span class="fw-bold">1</span>
+                    </div>
+                    <h5>Choisissez un restaurant</h5>
+                    <p class="text-muted">Parcourez notre sélection de restaurants près de chez vous</p>
+                </div>
+            </div>
+            <div class="col-lg-3 text-center">
+                <div class="step-item">
+                    <div class="step-number bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                        <span class="fw-bold">2</span>
+                    </div>
+                    <h5>Composez votre menu</h5>
+                    <p class="text-muted">Ajoutez vos plats préférés au panier et personnalisez-les</p>
+                </div>
+            </div>
+            <div class="col-lg-3 text-center">
+                <div class="step-item">
+                    <div class="step-number bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                        <span class="fw-bold">3</span>
+                    </div>
+                    <h5>Payez en sécurité</h5>
+                    <p class="text-muted">Choisissez votre mode de paiement : carte, mobile money...</p>
+                </div>
+            </div>
+            <div class="col-lg-3 text-center">
+                <div class="step-item">
+                    <div class="step-number bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                        <span class="fw-bold">4</span>
+                    </div>
+                    <h5>Recevez votre commande</h5>
+                    <p class="text-muted">Suivez votre livreur en temps réel jusqu'à votre porte</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section bg-primary text-white py-5">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Prêt à commencer ?</h2>
+                <p class="lead mb-4">
+                    Rejoignez des milliers d'utilisateurs qui font confiance à notre plateforme
+                </p>
+                <a href="{% url 'core:register' %}" class="btn btn-light btn-lg me-3">
+                    <i class="fas fa-rocket me-2"></i>Commencer maintenant
+                </a>
+                <a href="{% url 'core:role_selection' %}" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-question-circle me-2"></i>Quel rôle choisir ?
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .hero-section {
+        background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    .hero-image i {
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    .hero-image i:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+    
+    .hero-image i:nth-child(3) {
+        animation-delay: 1s;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+    }
+    
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .step-item {
+        padding: 20px;
+    }
+    
+    .cta-section {
+        background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    }
+</style>
+{% endblock %}
