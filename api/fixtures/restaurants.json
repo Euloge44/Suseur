@@ -1,0 +1,62 @@
+[
+  {
+    "model": "api.restaurant",
+    "pk": 1,
+    "fields": {
+      "name": "Le Bistrot Parisien",
+      "address": "123 Rue de la Paix, 75001 Paris",
+      "phone": "01 42 60 30 45",
+      "email": "contact@bistrot-parisien.fr",
+      "description": "Un authentique bistrot parisien proposant une cuisine traditionnelle française dans une ambiance chaleureuse.",
+      "capacity": 50,
+      "opening_time": "11:30:00",
+      "closing_time": "23:00:00",
+      "is_active": true
+    }
+  },
+  {
+    "model": "api.restaurant",
+    "pk": 2,
+    "fields": {
+      "name": "La Trattoria Italiana",
+      "address": "456 Avenue des Champs-Élysées, 75008 Paris",
+      "phone": "01 45 62 87 93",
+      "email": "info@trattoria-italiana.fr",
+      "description": "Restaurant italien authentique avec des pâtes fraîches maison et une sélection de vins italiens.",
+      "capacity": 35,
+      "opening_time": "12:00:00",
+      "closing_time": "22:30:00",
+      "is_active": true
+    }
+  },
+  {
+    "model": "api.restaurant",
+    "pk": 3,
+    "fields": {
+      "name": "Sushi Zen",
+      "address": "789 Rue Saint-Honoré, 75001 Paris",
+      "phone": "01 47 03 15 28",
+      "email": "reservation@sushi-zen.fr",
+      "description": "Restaurant japonais haut de gamme spécialisé dans les sushis frais et la cuisine japonaise raffinée.",
+      "capacity": 25,
+      "opening_time": "18:00:00",
+      "closing_time": "23:30:00",
+      "is_active": true
+    }
+  },
+  {
+    "model": "api.restaurant",
+    "pk": 4,
+    "fields": {
+      "name": "Café des Arts",
+      "address": "321 Boulevard Saint-Germain, 75006 Paris",
+      "phone": "01 43 26 14 07",
+      "email": "hello@cafe-des-arts.fr",
+      "description": "Café-restaurant artistique proposant brunchs, déjeuners légers et expositions d'art contemporain.",
+      "capacity": 40,
+      "opening_time": "08:00:00",
+      "closing_time": "20:00:00",
+      "is_active": false
+    }
+  }
+]
